@@ -7,7 +7,7 @@
 
 <br>
 
-<tabs>
+<tabs (selected)="select($event)">
   <tab *ngFor="let tab of tabs">
     <tab-title>
       Tab <b>{{ tab }}</b> title

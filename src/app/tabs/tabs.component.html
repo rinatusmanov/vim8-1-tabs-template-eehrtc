@@ -1,0 +1,11 @@
+<div>
+  <div>
+    <div *ngFor="let tabTitle of tabsTitle; let i=index" class="tabs__titles">
+      <div [innerHTML]="tabTitle" (click)="select(i)" [ngClass]="i == active ? 'tabs__title--active' : ''" class="tabs__title"></div>
+    </div>
+    <hr>
+    <div *ngFor="let tabContent of tabsContent; let i=index">
+      <div [innerHTML]="tabContent" *ngIf="active == i"></div>
+    </div>
+  </div>
+</div>
